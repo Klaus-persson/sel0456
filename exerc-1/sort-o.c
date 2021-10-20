@@ -1,13 +1,25 @@
+#include<string.h>
 #include <stdlib.h>
 #include <stdio.h>
 
+typedef struct  _range_t;
+
+
+
 typedef struct
 {
-  char data[4096];
+  
+  char data [4096];
   int key;
 } item_t;
 
-//tem_t* array= malloc(sizeof(int)  * 5);
+item_t *array_new(int max)
+{
+  item_t *data=(item_t *) malloc( max * sizeof(item_t));
+
+return array;
+}
+
 
 item_t array[] = {
     {"bill", 3},
@@ -41,6 +53,7 @@ void sort(item_t *a, int n)
 
 int main(void)
 {
+  array_new(5);
   sort(array, 5);
   for (int i = 0; i < 5; i++)
     printf("array[%d] = {%s, %d}\n", i, array[i].data, array[i].key);
